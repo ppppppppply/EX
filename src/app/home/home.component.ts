@@ -1,3 +1,4 @@
+import { Home } from './home.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  title = 'home';
 
+  home: Home = {
+    home_code: 1,
+    home_name: 'orange_home'
+  }
 }
