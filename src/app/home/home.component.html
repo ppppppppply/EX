@@ -10,3 +10,9 @@
     <label for="name">Home_name</label>
     <input type="name" [(ngModel)]="home.home_name" placeholder="name">
 </div>
+<h1>List Home</h1>
+<ul>
+    <li *ngFor="let home of homes">
+        <span>{{home.home_code}} {{home.home_name}} </span>
+    </li>
+</ul>
