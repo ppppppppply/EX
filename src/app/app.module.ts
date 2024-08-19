@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +13,9 @@ import { BrowserModule } from '@angular/platform-browser';
     HomeComponent
   ],
   imports: [
+    CommonModule,
+    FormsModule,
+    BrowserModule
 ],
 })
 export class AppModule { }
