@@ -10,9 +10,9 @@ import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
+    HomeComponent,
     CommonModule,
     FormsModule,
     BrowserModule

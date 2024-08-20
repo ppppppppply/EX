@@ -1,4 +1,4 @@
-import { Home } from './home.service';
+import { Interface_Home } from './home.service';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HOMETOWN } from '../home-town.service';
@@ -12,12 +12,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  title = 'home';
+  title = 'Manage home';
 
-  home: Home = {
-    home_code: 1,
-    home_name: 'orange_home'
+  selectedHome? : Interface_Home;
+
+  List_home = HOMETOWN;
+
+  ngOnInit(): void{
   }
 
-  homes = HOMETOWN;
+  onSelect(home: Interface_Home): void{
+    this.selectedHome = home;
+  }
 }

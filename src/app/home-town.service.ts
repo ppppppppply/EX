@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Home } from './home/home.service';
+import { Interface_Home } from './home/home.service';
 
-export const HOMETOWN: Home[] = [
-  {home_code: 2, home_name: 'red_home'},
+export const HOMETOWN: Interface_Home[] = [
+  {home_code: 2, home_name: 'red_home',},
   {home_code: 3, home_name: 'blue_home'},
   {home_code: 4, home_name: 'green_home'},
   {home_code: 5, home_name: 'pink_home'},

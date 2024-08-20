@@ -1,18 +1,17 @@
-<p>home works!</p>
-<p>{{title}} </p>
+<h1>{{title}} </h1>
 <div>
-    <h1>{{home.home_name}} </h1>
-    <ul>
-        <li>id: {{home.home_code}} </li>
-    </ul>
+    <h2>Edit Home</h2>
+    <!-- <input type="name" [(ngModel)]="home_1.home_name" placeholder="name"> -->
+     <div *ngIf="selectedHome">
+        <h2>ID: {{selectedHome.home_code}}</h2>
+        <label for="name">Home_name: </label>
+        <input type="name" [(ngModel)]="selectedHome.home_name" placeholder="name">
+     </div>
 </div>
-<div>
-    <label for="name">Home_name</label>
-    <input type="name" [(ngModel)]="home.home_name" placeholder="name">
-</div>
-<h1>List Home</h1>
+<h2>List Home</h2>
 <ul>
-    <li *ngFor="let home of homes">
-        <span>{{home.home_code}} {{home.home_name}} </span>
+    <li *ngFor="let pram of List_home">
+        <h3>{{pram.home_code}} {{pram.home_name}} </h3>
+        <button type="click" (click)="onSelect(pram)" >select</button>
     </li>
 </ul>
