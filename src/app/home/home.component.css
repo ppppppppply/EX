@@ -75,3 +75,9 @@ button:hover {
 .listhome {
     margin-left: 20px;
 }
+
+.container_button {
+    box-shadow: none;
+    display: flex;
+    gap: 3px;
+}
