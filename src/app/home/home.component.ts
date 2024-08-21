@@ -1,15 +1,17 @@
+import { MessageService } from './../message/message.service';
 import { Interface_Home, HomeService } from './home.service';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HOMETOWN } from '../home-town.service';
 import { CommonModule } from '@angular/common';
 import { HomeDetailComponent } from "../home-detail/home-detail.component";
-import { log } from 'console';
+import { MessageComponent } from "../message/message.component";
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, CommonModule, HomeDetailComponent],
+  imports: [FormsModule, CommonModule, HomeDetailComponent, MessageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -29,8 +31,15 @@ export class HomeComponent {
     this.selectedHome = home;
   }
 
+  onAddMessage(home: Interface_Home): void{
+    this.messageservice.add(`${home.home_detail}`)
+  }
 
-  constructor(private homesevice : HomeService) {
+
+  constructor(
+    private homesevice : HomeService,
+    private messageservice : MessageService
+  ) {
 
   }
 

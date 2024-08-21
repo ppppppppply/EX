@@ -5,8 +5,12 @@
 </div>
 <h2 class="listhome">List Home</h2>
 <ul>
-    <li *ngFor="let param of List_home">
-        <h3>{{param.home_code}} {{param.home_name}} </h3>
-        <button type="click" (click)="onSelect(param)" >select</button>
+    <li *ngFor="let item of List_home">
+        <h3>{{item.home_code}} {{item.home_name}} </h3>
+        <div class="container_button">
+            <button type="click" (click)="onSelect(item)" >Select</button>
+            <button type="click" (click)="onAddMessage(item)" >Show Detail</button>
+        </div>
     </li>
 </ul>
+<app-message></app-message>
