@@ -6,6 +6,7 @@ import { Observable, of } from 'rxjs';
 export interface Interface_Home {
   home_code : number;
   home_name : string;
+  home_detail : string;
 }
 
 @Injectable({
