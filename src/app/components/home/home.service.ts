@@ -1,6 +1,6 @@
-import { MessageService } from './../message/message.service';
+import { MessageService } from '../message/message.service';
 import { Injectable } from '@angular/core';
-import { HOMETOWN } from '../home-town.service';
+import { HOMETOWN } from '../../home-town.service';
 import { Observable, of } from 'rxjs';
 
 export interface Interface_Home {

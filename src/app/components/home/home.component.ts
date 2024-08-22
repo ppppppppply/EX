@@ -1,21 +1,31 @@
-import { MessageService } from './../message/message.service';
+import { MessageService } from '../message/message.service';
 import { Interface_Home, HomeService } from './home.service';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HOMETOWN } from '../home-town.service';
+import { HOMETOWN } from '../../home-town.service';
 import { CommonModule } from '@angular/common';
-import { HomeDetailComponent } from "../home-detail/home-detail.component";
 import { MessageComponent } from "../message/message.component";
+import { RouterModule } from '@angular/router';
+import { HomeDetailComponent } from '../home-detail/home-detail.component';
+
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, CommonModule, HomeDetailComponent, MessageComponent],
+  imports: [FormsModule, CommonModule, HomeDetailComponent, MessageComponent, RouterModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  
+  constructor(
+    private homesevice : HomeService,
+    private messageservice : MessageService
+  ) {
+
+  }
+
   get_list_home_service: Interface_Home[] = [];
   title = 'Manage home';
 
@@ -33,14 +43,6 @@ export class HomeComponent {
 
   onAddMessage(home: Interface_Home): void{
     this.messageservice.add(`${home.home_detail}`)
-  }
-
-
-  constructor(
-    private homesevice : HomeService,
-    private messageservice : MessageService
-  ) {
-
   }
 
   getHome(): void {

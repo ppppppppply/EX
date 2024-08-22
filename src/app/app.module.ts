@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { HomeDetailComponent } from './home-detail/home-detail.component';
-import { MessageComponent } from './message/message.component';
+
+import { MessageComponent } from './components/message/message.component';
+import { RouterOutlet } from '@angular/router';
+import { HomeDetailComponent } from './components/home-detail/home-detail.component';
+// import { AppRoutingModule } from './app-routing.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     MessageComponent,
@@ -20,7 +22,8 @@ import { MessageComponent } from './message/message.component';
     HomeComponent,
     CommonModule,
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    RouterOutlet
 ],
 })
 export class AppModule { }

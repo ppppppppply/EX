@@ -1,6 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { Interface_Home } from '../home/home.service'
-import { HOMETOWN } from '../home-town.service';
+import { HOMETOWN } from '../../home-town.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 

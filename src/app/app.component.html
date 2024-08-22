@@ -1,6 +1,9 @@
 <main class="main">
   <div class="content">
-    <app-home></app-home>
-    <app-message></app-message>
+    <div *ngIf="show_button_HOME">
+      <button (click)="move()">HOME</button>
+    </div>
+    <div *ngIf="show_button_BACK"><button (click)="goback()">BACK</button></div>
+    <router-outlet></router-outlet>
   </div>
 </main>

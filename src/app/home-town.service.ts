@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Interface_Home } from './home/home.service';
+import { Interface_Home } from './components/home/home.service';
 
 export const HOMETOWN: Interface_Home[] = [
   {home_code: 2, home_name: 'red_home', home_detail: 'บ้านหลังแรกเป็นบ้านสไตล์โมเดิร์นสองชั้น พื้นที่ใช้สอย 250 ตารางเมตร มี 4 ห้องนอน 3 ห้องน้ำ และที่จอดรถสำหรับ 2 คัน'},
